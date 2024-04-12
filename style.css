@@ -1,0 +1,576 @@
+/* Fonts and their sizes */
+body{
+    font-family: "Open Sans", sans-serif;
+}
+h1{
+    font-weight: bold;
+}
+h2{
+    font-weight: 500;
+}
+.calendar :last-child{
+    font-weight: 700;
+
+}
+footer li:first-child{
+    font-weight: 700;
+}
+
+footer li:first-child{
+    font-size: 0.8rem;
+}
+
+footer li > a{
+    font-size: 0.7rem;
+}
+h6{
+    font-size: 0.6rem;
+    padding: 5px 0 5px 5%;
+}
+
+.t-schedule h2,
+.flexbox-task div h3{
+    font-weight: bold;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    
+}
+.flexbox-task h3 > span{
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+.flexbox-task h5{
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+.flexbox-task div > div h3{
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.flexbox-task div > div h5{
+    font-size: 0.65rem;
+}
+
+
+/* Nav bar */
+li svg{
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+nav ul{
+    margin: 14px 0 14px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    align-items: center;
+}
+
+nav ul > li:nth-child(3){
+    margin: 0 10px 0 0;
+    border: 1px solid;
+}
+nav ul > li:nth-child(2){
+    margin-right: 6px;
+    border: 1px solid;
+}  
+nav ul > li:nth-child(1){
+    flex-grow: 2;
+    margin: 0 0 0 10px;
+}
+/* Calendar */
+.flexbox-container div > svg{
+    display: none;
+}
+.dates h1{
+   margin: 20px 0 15px 0;
+   text-align: center; 
+}
+.calendar{
+    min-height: 54px;
+    min-width: 54px;
+    background-color: #F9F366;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgb(117, 117, 117);
+    text-align: center;
+    line-height: 0.95rem;
+}
+
+.calendar > :first-child{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.calendar.four{
+    min-height: 66px;
+    min-width: 66px;
+    
+}
+.calendar.four > :first-child{
+    margin-top: 18px;
+}
+.flexbox-container{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    justify-content: center;
+    padding: 2px 0 2px 0;
+}
+/* Today's schedule */
+.t-schedule{
+    background-color: #FFFFFF;
+    width: min(85% ,300px);
+    margin: 40px auto;
+    box-shadow: 1px 1px 2px rgb(117, 117, 117);
+
+}
+.flexbox-menu ul{
+    display: flex;
+    align-items: center;
+    padding: 8px 0 10px 0;
+    width: 96%;
+    margin-left: 4%;
+    
+}
+.flexbox-menu ul > :first-child{
+    flex-grow: 1;
+}
+.flexbox-task > div h3 > span{
+    display: inline-block;
+}
+.flexbox-task > div:first-child h3 > span{
+    text-align: center;
+    margin-top: 2px;
+    background-color: #F9F366;
+    padding: 1px 0 1px 0;
+    width: 66px;
+    border-radius: 6px;
+}
+.flexbox-task > div:nth-child(2) h3 > span{
+    box-sizing: border-box;
+    margin-top: 2px;
+    padding: 1px 0 1px 8px;
+    background-color: #B9FF61;
+    width: 66px;
+    border-radius: 6px;
+}
+
+.flexbox-task > div:nth-child(3) h3 > span{
+    box-sizing: border-box;
+    margin-top: 2px;
+    padding: 1px 0 1px 8px;
+    background-color: #FF4444;
+    width: 66px;
+    border-radius: 6px;
+}
+.flexbox-task > div:not(.add-task, .extra-space){
+    display: flex;
+    align-items: center;
+    background-color: #494636;
+    border-radius: 6px;
+    width: 94%;
+    height: 48px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
+
+}
+.flexbox-task h3,
+.flexbox-task h5{
+    color: white;
+}
+.flexbox-task h3 span{
+    color: black;
+}
+.flexbox-task div > :first-child{
+    margin: 0 6px 0 6px;
+}
+
+.flexbox-task h3{
+    flex-grow: 1;
+}
+.flexbox-task h5{
+    margin-right: 8px;
+}
+
+.flexbox-task > div > div {
+    margin-top: 5px ;
+    
+}
+.flexbox-task > div:nth-child(3) > h3{
+    margin-top: 5px;
+}
+
+.flexbox-task > div:nth-child(3){
+    align-content: flex-start;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 10px 0 10px 0;
+}
+
+.flexbox-task > div:nth-child(3) > div{
+    flex-basis: 100%;
+    padding-bottom: 20px;
+}
+
+.flexbox-task > div:nth-child(3) > div div:first-child{
+    margin: 0 0 0 8%;
+}
+.flexbox-task > div:nth-child(3) > div div{
+    display: flex;
+    width: 92%;
+    margin-left: 8%;
+    height: 30px;
+    align-items: center;
+}
+.add-task{
+    border: 1px dashed black;
+    border-radius: 6px;
+    width: 94%;
+    height: 48px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.add-task > svg{
+    align-self: center;
+}
+.extra-space{
+    height: 24px;
+    margin: 0;
+}
+footer{
+    background-color: #494636;
+    color: white;
+}
+.flexbox-footer{
+    display: flex;
+    margin-top: 100px;
+    padding: 30px 0 50px 0;
+    justify-content: center;
+    gap: 25px;
+}
+hr{
+    border: none;
+    width: 90%;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 350px){
+
+.calendar.four{
+    min-height: 62px;
+    min-width: 62px;
+}
+.calendar{
+    min-height: 50px;
+    min-width: 50px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 0.9rem;
+}
+.calendar.four :first-child{
+    margin-top: 16px;
+}
+.calendar > :first-child{
+    margin-top: 10px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 0.8rem;
+}
+.t-schedule h2, 
+.flexbox-task div h3{
+    font-size: 0.8rem;
+} 
+
+}
+@media screen and (max-width: 320px){
+
+.calendar.four{
+    min-height: 58px;
+    min-width: 58px;
+}
+.calendar{
+    min-height: 46px;
+    min-width: 46px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 0.8rem;
+}
+.calendar.four :first-child{
+    margin-top: 14px;
+}
+.calendar > :first-child{
+    margin-top: 8px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 0.7rem;
+}
+.t-schedule h2, 
+.flexbox-task div h3{
+    font-size: 0.8rem;
+}    
+}
+
+@media (min-width: 568px){
+
+.flexbox-container div > svg{
+    display: initial;
+    width: 80%;
+    height: 80%;
+}
+.calendar.four{
+    min-height: 70px;
+    min-width: 70px;
+}
+.calendar{
+    min-height: 58px;
+    min-width: 58px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 1.05rem;
+}
+.calendar.four :first-child{
+    margin-top: 20px;
+}
+.calendar > :first-child{
+    margin-top: 14px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 1.05rem;
+}
+
+.flexbox-footer{
+    gap:40px
+}
+nav ul > :first-child svg{
+    width: 32px;
+    height: 32px;
+}
+nav ul > :nth-child(2) svg{
+    width: 38px;
+    height: 18px;
+}
+nav ul > :last-child svg{
+    width: 70px;
+    height: 23px;
+}
+
+}
+@media (min-width: 768px){
+.flexbox-footer{
+    gap:60px
+}
+}
+@media (min-width: 1024px){
+.dates > h1{
+    font-size: 1.1rem;
+}
+
+.flexbox-footer{
+gap: 80px;
+
+}
+nav ul > :first-child svg{
+    width: 35px;
+    height: 35px;
+}
+nav ul > :nth-child(2) svg{
+    width: 42px;
+    height: 20px;
+}
+nav ul > :last-child svg{
+    width: 77px;
+    height: 25px;
+}
+
+.flexbox-container div > svg{
+    display: initial;
+    width: 90%;
+    height: 90%;
+}
+.calendar.four{
+    min-height: 77px;
+    min-width: 77px;
+}
+.calendar{
+    min-height: 64px;
+    min-width: 64px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 1.1rem;
+}
+.calendar.four :first-child{
+    margin-top: 22px;
+}
+.calendar > :first-child{
+    margin-top: 16px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 1.1rem;
+}
+}
+@media (min-width: 768px){
+.flexbox-footer{
+    gap:60px
+}
+}
+@media (min-width: 1024px){
+.flexbox-footer{
+    gap: 80px;
+
+}
+nav ul > :first-child svg{
+    width: 35px;
+    height: 35px;
+}
+nav ul > :nth-child(2) svg{
+    width: 42px;
+    height: 20px;
+}
+nav ul > :last-child svg{
+    width: 77px;
+    height: 25px;
+}
+
+.flexbox-container div > svg{
+    display: initial;
+    width: 90%;
+    height: 90%;
+}
+.calendar.four{
+    min-height: 77px;
+    min-width: 77px;
+}
+.calendar{
+    min-height: 64px;
+    min-width: 64px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 1.1rem;
+}
+.calendar.four :first-child{
+    margin-top: 22px;
+}
+.calendar > :first-child{
+    margin-top: 16px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 1.1rem;
+}
+}
+@media (min-width: 1300px){
+.flexbox-footer{
+    gap: 100px;
+
+}
+nav ul > :first-child svg{
+    width: 38px;
+    height: 38px;
+}
+nav ul > :nth-child(2) svg{
+    width: 47px;
+    height: 24px;
+    
+}
+nav ul > :last-child svg{
+    width: 84px;
+    height: 27px;
+}
+
+.flexbox-container div > svg{
+    display: initial;
+    width: 100%;
+    height: 100%;
+}
+.calendar.four{
+    min-height: 84px;
+    min-width: 84px;
+}
+.calendar{
+    min-height: 70px;
+    min-width: 70px;
+}
+.calendar.four :first-child,
+.calendar.four :last-child{
+    font-size: 1.2rem;
+}
+.calendar.four :first-child{
+    margin-top: 24px;
+}
+.calendar > :first-child{
+    margin-top: 18px;
+}
+.calendar :first-child,
+.calendar :last-child{
+    font-size: 1.2rem;
+}
+.dates > h1{
+    font-size: 1.2rem;
+}
+.t-schedule{
+    min-width: 320px;
+}
+.flexbox-task > div:first-child h3 > span{
+    margin-top: 4px;    
+}
+.flexbox-task > div:nth-child(2) h3 > span{
+    margin-top: 4px;    
+}
+.flexbox-task > div:nth-child(3) h3 > span{
+    margin-top: 4px;    
+}
+.flexbox-task > div:first-child,
+.flexbox-task > div:nth-child(2){
+    height: 54px;
+}
+.flexbox-task > div:nth-child(3){
+    padding: 6px 0 6px 0;
+}
+.t-schedule h2, 
+.flexbox-task div h3{
+    font-size: 0.95rem;
+}
+.flexbox-task h3 > span{
+    font-size: 0.8rem;
+}
+.flexbox-task h5{
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+.flexbox-task div > div h3{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.flexbox-task div > div h5{
+    font-size: 0.7rem;
+}
+.flexbox-task > div:not(.add-task, .extra-space){
+    margin-bottom: 14px;
+}
+} 
+
+
+
+
+
+
+
+
+

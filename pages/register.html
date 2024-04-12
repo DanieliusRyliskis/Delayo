@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <h1>Create account</h1>
+    </header>
+<!-- Form -->
+
+    <main>
+        <section>
+            
+            <form action="">
+            
+                <div>
+                    <label for="name">Username</label>
+                    <input type="text" name="user" id="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.77 12C20.77 11.6412 20.576 11.4056 20.1878 10.9343C18.7677 9.21014 15.6355 6 11.9998 6C8.36403 6 5.23183 9.21014 3.81174 10.9343C3.42357 11.4056 3.22949 11.6412 3.22949 12C3.22949 12.3588 3.42357 12.5944 3.81173 13.0657C5.23183 14.7899 8.36403 18 11.9998 18C15.6355 18 18.7677 14.7899 20.1878 13.0657C20.576 12.5944 20.77 12.3588 20.77 12ZM11.9998 15C13.6566 15 14.9998 13.6569 14.9998 12C14.9998 10.3431 13.6566 9 11.9998 9C10.3429 9 8.99977 10.3431 8.99977 12C8.99977 13.6569 10.3429 15 11.9998 15Z" fill="#33363F"/>
+                    </svg>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I agree with the <a href="">Terms & Conditions</a></label>
+                </div>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+
+            <div class="login">
+                <h2>Already have an account? 
+                    <a href="">Login In</a>
+                </h2>    
+            </div>
+
+        </section>
+    
+<!-- lower section -->
+        <section>
+            <div class="bridge">
+                <div>
+                    <hr>
+                </div>
+                <h2>or</h2>
+                <div>
+                    <hr>
+                </div>   
+            </div>
+
+            <div class="flex-container">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_173_775)">
+                    <path d="M19.7618 10.1871C19.7618 9.3677 19.6954 8.76977 19.5515 8.14969H10.1948V11.848H15.687C15.5763 12.7671 14.9783 14.1512 13.6496 15.0813L13.6309 15.2051L16.5893 17.4969L16.7943 17.5174C18.6767 15.7789 19.7618 13.2211 19.7618 10.1871Z" fill="#4285F4"/>
+                    <path d="M10.1947 19.9313C12.8854 19.9313 15.1442 19.0454 16.7941 17.5174L13.6494 15.0813C12.8079 15.6682 11.6784 16.0779 10.1947 16.0779C7.55932 16.0779 5.3226 14.3395 4.52527 11.9366L4.4084 11.9466L1.33222 14.3273L1.29199 14.4391C2.93077 17.6945 6.29695 19.9313 10.1947 19.9313Z" fill="#34A853"/>
+                    <path d="M4.52526 11.9366C4.31488 11.3166 4.19313 10.6521 4.19313 9.96565C4.19313 9.27908 4.31488 8.61473 4.51419 7.99466L4.50862 7.8626L1.39389 5.44366L1.29198 5.49214C0.616561 6.84305 0.229004 8.36008 0.229004 9.96565C0.229004 11.5712 0.616561 13.0882 1.29198 14.4391L4.52526 11.9366Z" fill="#FBBC05"/>
+                    <path d="M10.1947 3.85336C12.066 3.85336 13.3283 4.66168 14.048 5.33717L16.8605 2.59107C15.1332 0.985496 12.8854 0 10.1947 0C6.29695 0 2.93077 2.23672 1.29199 5.49214L4.51421 7.99466C5.3226 5.59183 7.55932 3.85336 10.1947 3.85336Z" fill="#EB4335"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_173_775">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <h3>Sign Up with Google</h3> 
+            </div>
+    </main>
+</body>
+</html>
