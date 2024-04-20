@@ -64,7 +64,7 @@ li svg {
 header > nav ul li:nth-child(1) {
   flex-grow: 1;
   margin-left: 1rem;
-  visibility: hidden;
+  /* visibility: initial; */
 }
 header > nav ul li:nth-child(2) {
   margin-right: 0.6rem;
@@ -242,6 +242,7 @@ main nav {
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
+  display: none;
 }
 main nav div:last-child {
   align-self: center;
