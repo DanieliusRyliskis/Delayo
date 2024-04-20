@@ -64,7 +64,6 @@ li svg {
 header > nav ul li:nth-child(1) {
   flex-grow: 1;
   margin-left: 1rem;
-  /* visibility: initial; */
 }
 header > nav ul li:nth-child(2) {
   margin-right: 0.6rem;
@@ -231,6 +230,9 @@ footer h6 {
 }
 
 /* ===================================Sidebar=================================== */
+header nav {
+  border: 1px solid blue;
+}
 
 main nav {
   box-shadow: 0.1rem 0.1rem 0.7rem rgb(129, 129, 129);
@@ -240,43 +242,50 @@ main nav {
   width: 20%;
   background-color: white;
   height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
   display: none;
 }
-main nav div:last-child {
+.grid__wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr;
+}
+.grid__wrapper > div:first-child {
+  align-self: self-start;
+  height: 6.2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.grid__wrapper > div:first-child svg {
+  margin-left: 1rem;
   align-self: center;
 }
-main nav div:first-child {
-  display: grid;
-  width: 70%;
-  height: 6.4rem;
-  grid-template-columns: 1fr 2fr;
-  /* justify-self: center; */
-  justify-items: center;
-  align-items: center;
+.grid__wrapper > div:first-child span {
+  align-self: center;
 }
-main nav div:first-child span {
+.grid__wrapper span {
   font-size: var(--fs-h4);
   font-weight: 700;
 }
-
-main nav li a {
+.grid__wrapper div:first-child ~ div li a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 80%;
-  margin-left: 2rem;
+  justify-items: center;
   align-items: center;
+  margin: 0 auto;
+}
+.grid__wrapper > div:nth-child(2) {
+  align-self: self-start;
+}
+.grid__wrapper > div:nth-child(3) {
+  align-self: center;
+}
+.grid__wrapper div:first-child ~ div li a span {
+  justify-self: flex-start;
 }
 
-main nav li a > svg {
-  justify-self: center;
-}
-
-main nav div:first-child ~ div span {
-  font-size: var(--fs-h4);
-  font-weight: 700;
-}
 /* .overlap {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
