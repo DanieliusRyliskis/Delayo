@@ -24,20 +24,30 @@ menuOpen.addEventListener("click", menuToggleOn);
 menuClose.addEventListener("click", menuToggleOff);
 
 // Menu hover
-// sidebar.addEventListener("mouseover", function (e) {
-//   if (e.target.classList.contains("menu__item")) {
-//     // console.log(e.target);
-//     const hoveredElement = e.target;
-//     hoveredElement.style.color = "#f9f366";
-//     const svg = hoveredElement.firstElementChild;
-//     svg.style.filter =
-//       "invert(98%) sepia(59%) saturate(1332%) hue-rotate(353deg) brightness(122%) contrast(95%)";
-//     const siblings = hoveredElement
-//       .closest(".menu__choices")
-//       .querySelectorAll(".menu__item");
-//     console.log(siblings);
-//     siblings.forEach((el) => {
-//       if (el !== hoveredElement) el.style.opacity = 0.5;
-//     });
-//   }
-// });
+sidebar.addEventListener("mouseover", function (e) {
+  if (e.target.classList.contains("menu__item")) {
+    const hoveredElement = e.target;
+    hoveredElement.style.color = "#f9f366";
+    const svg = hoveredElement.firstElementChild;
+    svg.style.filter =
+      "invert(98%) sepia(59%) saturate(1332%) hue-rotate(353deg) brightness(122%) contrast(95%)";
+    const siblings = hoveredElement
+      .closest(".grid__wrapper")
+      .querySelectorAll(".menu__item");
+    siblings.forEach((el) => {
+      if (el !== hoveredElement) {
+        el.style.color = "initial";
+        const svg = el.firstElementChild;
+        svg.style.filter = "initial";
+      }
+    });
+  }
+});
+menuItem.forEach((e) =>
+  e.addEventListener("mouseleave", function (event) {
+    const hoveredElement = event.fromElement;
+    const svg = hoveredElement.firstElementChild;
+    hoveredElement.style.color = "initial";
+    svg.style.filter = "initial";
+  })
+);
