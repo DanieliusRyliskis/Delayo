@@ -297,6 +297,23 @@ footer h6 {
   opacity: 50%;
   z-index: 1;
 }
+.menu__item {
+  transition: 0.4s;
+}
+.menu__item svg {
+  transition: 0.4s;
+}
+path {
+  fill: "white";
+}
+.menu__fill {
+  transition: 0.4s;
+  fill: black;
+}
+.menu__stroke {
+  transition: 0.4s;
+  stroke: black;
+}
 /*
 .hero-section {
   grid-area: 1 / 1 / 1 / 6;
