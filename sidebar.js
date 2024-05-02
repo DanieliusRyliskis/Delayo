@@ -23,7 +23,7 @@ menuOpen.addEventListener("click", menuToggleOn);
 
 menuClose.addEventListener("click", menuToggleOff);
 
-const svgColorChange = function (element, elementColor) {
+const itemColorChange = function (element, elementColor) {
   element.style.color = elementColor;
   const svg = element.firstElementChild;
   const paths = svg.children;
@@ -37,24 +37,24 @@ const svgColorChange = function (element, elementColor) {
 };
 
 // Menu hover
-sidebar.addEventListener("mouseover", function (e) {
-  const hoveredElement = e.target;
-  if (hoveredElement.classList.contains("menu__item")) {
-    svgColorChange(hoveredElement, "#f9f366");
-    const siblings = hoveredElement
-      .closest(".grid__wrapper")
-      .querySelectorAll(".menu__item");
-    siblings.forEach((siblingElement) => {
-      if (siblingElement !== hoveredElement) {
-        svgColorChange(siblingElement, "black");
+menuItem.forEach((e) =>
+  e.addEventListener("mouseenter", function (event) {
+    console.log(event.target);
+    // debugger;
+    const hoveredElement = event.target;
+    itemColorChange(hoveredElement, "#f9f366");
+    // Change the siblings
+    menuItem.forEach((sibling) => {
+      if (sibling !== hoveredElement) {
+        itemColorChange(sibling, "black");
       }
     });
-  }
-});
+  })
+);
 
 menuItem.forEach((e) =>
   e.addEventListener("mouseleave", function (event) {
-    const hoveredElement = event.fromElement;
-    svgColorChange(hoveredElement, "black");
+    const hoveredElement = event.target;
+    itemColorChange(hoveredElement, "black");
   })
 );
