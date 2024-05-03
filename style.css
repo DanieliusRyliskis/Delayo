@@ -164,12 +164,13 @@ header > nav ul li:nth-child(3) {
   font-weight: 700;
 }
 
-main > section:nth-child(4) {
+main > section:nth-child(5) {
   margin-top: 10rem;
 }
-main > section:nth-child(4) h2 {
+main > section:nth-child(5) h2 {
   text-align: center;
 }
+
 .flex {
   display: flex;
   justify-content: center;
@@ -235,10 +236,9 @@ footer h6 {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20%;
+  width: max(20%, 25rem);
   background-color: white;
   height: 100%;
-  /* display: none; */
 }
 .sidebar--active {
   transition: 0.8s ease-in-out;
@@ -274,7 +274,7 @@ footer h6 {
   width: 80%;
   justify-items: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 .grid__wrapper > div:nth-child(2) {
   align-self: self-start;
@@ -332,6 +332,10 @@ main nav {
 .menu__item:hover {
   color: #f9f366;
 } */
+.menu--active {
+  border-left: 0.4rem solid #f9f366;
+  padding-left: 1.5rem;
+}
 /* ===================================Media Queries=================================== */
 
 @media (min-width: 26em) {
