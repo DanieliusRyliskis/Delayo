@@ -34,7 +34,7 @@ if (currentPage === "Home page") {
   currentItem.classList.add("menu--active");
   itemColorChange(currentItem, "#f9f366");
 } else if (currentPage === "Settings") {
-  const currentItem = document.getElementById("Tasks");
+  const currentItem = document.getElementById("Settings");
   currentItem.classList.add("menu--active");
   itemColorChange(currentItem, "#f9f366");
 }

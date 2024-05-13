@@ -30,6 +30,9 @@ main h3 {
 h4 {
   font-size: var(--fs-h4);
 }
+.grid--benefits h4 {
+  font-size: clamp(1.6rem, 1.28rem + 1vw, 3.2rem);
+}
 
 main h5 {
   font-size: var(--fs-h5);
@@ -130,7 +133,7 @@ header > nav ul li:nth-child(3) {
 .yellow-container h4 {
   text-align: center;
   font-weight: 700;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 6rem 0;
   width: 60%;
   margin: 0 auto;
 }
@@ -143,16 +146,20 @@ header > nav ul li:nth-child(3) {
 }
 .grid > :nth-child(3) {
   background-color: #f9f366;
+  display: flex;
+  justify-content: flex-start;
 }
 .grid > :nth-child(3) h4 {
-  text-align: start;
-  margin: 0 3rem 0 2rem;
+  width: 20%;
+  padding-left: 4rem;
+  /* margin: 0 3rem 0 2rem; */
 }
 .grid--benefits > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2.5rem, 1.453rem + 3.941vw, 5rem) 0;
+  /* padding: clamp(2.5rem, 1.453rem + 3.941vw, 5rem) 0; */
+  padding: clamp(2.5rem, 1.4rem + 5.5vw, 8rem) 0;
 }
 .grid {
   display: grid;
