@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="light--mode transition--a">
     <!-- ==============================Header============================== -->
     <header>
       <nav>
@@ -29,20 +29,23 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="menu__stroke"
                   d="M7.08331 9.91669H26.9166"
-                  stroke="#081109"
+                  stroke="#000000"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 17H26.9166"
-                  stroke="#081109"
+                  stroke="#000000"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 24.0833H26.9166"
-                  stroke="#081109"
+                  stroke="#000000"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
@@ -50,13 +53,14 @@
             </a>
           </li>
           <li>
-            <label for="switch">
-              <input type="checkbox" id="switch" />
-              <div class="toggle">
-                <span class="toggle__b"></span>
-                <span class="toggle__c"></span>
-              </div>
-            </label>
+            <!-- Button -->
+            <div class="toggle">
+              <span
+                class="toggle__b transition--a"
+                aria-label="toggle dark mode"
+              ></span>
+              <span class="toggle__c transition--a"></span>
+            </div>
           </li>
           <li>
             <a href="">
@@ -129,25 +133,28 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="menu__stroke"
                   d="M7.08331 9.91669H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 17H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 24.0833H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
               </svg>
-              <span>Menu</span>
+              <span id="menu--text">Menu</span>
             </div>
             <div>
               <ul>
@@ -280,11 +287,19 @@
       </div>
       <section>
         <div class="yellow-container">
-          <img src="../img/task-screen.png" alt="task screen image" />
-          <h4>
-            Keep track of your busy schedule and organize intervals between work
-            and rest session with Delayo
-          </h4>
+          .
+          <img
+            src="./img/taskscreen--lightmode.png"
+            alt="task screen image"
+            class="image"
+          />
+          <div class="div--white transition--a"></div>
+          <div class="div--yellow">
+            <h4>
+              Keep track of your busy schedule and organize intervals between
+              work and rest session with Delayo
+            </h4>
+          </div>
         </div>
       </section>
       <section>
@@ -305,6 +320,7 @@
         <div class="flex">
           <div>
             <svg
+              class="functionality--svg"
               width="156"
               height="156"
               viewBox="0 0 156 156"
@@ -351,6 +367,7 @@
           </div>
           <div>
             <svg
+              class="functionality--svg"
               width="156"
               height="156"
               viewBox="0 0 156 156"
@@ -358,11 +375,13 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                class="ignore"
                 d="M78 78V32C106.789 32 125.06 59.9286 123.952 78H78Z"
                 fill="#06C195"
                 fill-opacity="0.4"
               />
               <circle
+                class="ignore--2"
                 cx="78"
                 cy="78"
                 r="45.5"
@@ -396,6 +415,7 @@
           </div>
           <div>
             <svg
+              class="functionality--svg"
               width="149"
               height="149"
               viewBox="0 0 149 149"
@@ -463,6 +483,7 @@
       <hr />
       <h6>© 2024 Delayo. All rights reserved.</h6>
     </footer>
-    <script src="./sidebar.js"></script>
+    <script type="module" src="./sidebar.js"></script>
+    <script type="module" src="./darkmode.js"></script>
   </body>
 </html>

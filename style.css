@@ -7,11 +7,44 @@
   --fs-h3: clamp(1.6rem, 1.48rem + 0.6vw, 2.2rem);
   --fs-h4: clamp(0.9rem, 0.76rem + 0.7vw, 1.6rem);
   --fs-h5: clamp(1rem, 0.92rem + 0.4vw, 1.4rem);
+  /* Light mode */
+}
+/* .mode {
+  transition: 0.5s ease-in-out;
+} */
+
+.light--mode {
+  --color-background: #ffffff;
+  --color-foreground: #e6e6e444;
+  --color-primary: #f9f366;
+  --color-secondary: #494636;
+  --color-accent: #50b19a;
+  --text-color-primary: #000000;
+  --text-color-secondary: #7e7e7e;
+}
+.dark--mode {
+  --color-background: #212121;
+  --color-foreground: #313131;
+  --color-primary: #f9f366;
+  --color-secondary: #54524b;
+  --color-accent: #50b19a;
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #d2d2d2;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color-primary);
 }
 
 h1 {
@@ -36,10 +69,11 @@ h4 {
 
 main h5 {
   font-size: var(--fs-h5);
+  color: var(--text-color-secondary);
 }
-
 h6 {
   font-size: 0.8rem;
+  color: #ffffff;
 }
 footer li:first-child ~ li {
   font-size: clamp(1.2rem, 0.96rem + 0.5357vw, 2rem);
@@ -82,7 +116,9 @@ header > nav ul li:nth-child(3) {
   height: fit-content;
   display: flex;
 }
-
+.transition--a {
+  transition: 0.6s ease-in-out;
+}
 .toggle__b {
   width: 4.5rem;
   height: 2.1rem;
@@ -100,6 +136,16 @@ header > nav ul li:nth-child(3) {
   left: 0.22rem;
   top: 0.24rem;
 }
+/* ================================SVG Colors================================ */
+/* .header__stroke {
+  stroke: var(--text-color-primary);
+} */
+.menu__stroke {
+  stroke: var(--text-color-primary);
+}
+.menu__fill {
+  fill: var(--text-color-primary);
+}
 /* ===================================Main=================================== */
 .hero-section {
   text-align: center;
@@ -107,49 +153,87 @@ header > nav ul li:nth-child(3) {
 }
 
 .hero-section h3 {
+  color: var(--text-color-secondary);
   margin-top: 2rem;
 }
 
 .hero-section span {
-  color: #f9f366;
+  color: var(--color-primary);
 }
 
 .hero-section div {
-  background-color: #f9f366;
+  background-color: var(--color-primary);
   display: inline-block;
   padding: 1rem 2rem;
   margin-top: 2rem;
   font-weight: 700;
 }
-
+/* Fix the container */
 .yellow-container {
-  background-image: linear-gradient(#ffffff 20%, #f9f366 20%, #f9f366);
+  /* background-image: linear-gradient(
+    var(--color-background) 20%,
+    var(--color-primary) 20%,
+    var(--color-primary)
+  ); */
+  /* Use grid instead */
+  /* Try fit content */
+  margin-top: 10rem;
+  /* background-color: var(--color-primary); */
+  /* height: 60rem; */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 .yellow-container img {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+  grid-column: 2 / 9;
+  grid-row: 1 / 5;
+  justify-self: center;
+  z-index: 1;
 }
-.yellow-container h4 {
+.div--white {
+  background-color: var(--color-background);
+  grid-column: 1 / 10;
+  grid-row: 1 / 3;
+}
+.div--yellow {
+  background-color: var(--color-primary);
+  grid-column: 1 / 10;
+  grid-row: 3 / 6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.div--yellow h4 {
+  color: #000000;
   text-align: center;
   font-weight: 700;
-  padding: 2rem 0 6rem 0;
+  /* padding: 6rem 0 10rem 0; */
+  margin-bottom: clamp(0.4rem, -4.667rem + 10.556vw, 8rem);
   width: 60%;
-  margin: 0 auto;
 }
 .grid > :first-child {
-  background-color: #494636;
+  background-color: var(--color-secondary);
   color: white;
 }
 .grid > :nth-child(2) {
-  background-color: #06c195;
+  background-color: var(--color-accent);
 }
 .grid > :nth-child(3) {
-  background-color: #f9f366;
+  background-color: var(--color-primary);
   display: flex;
   justify-content: flex-start;
 }
+.grid > :first-child h4 {
+  color: #ffffff;
+}
+
+.grid > :nth-child(2) h4 {
+  color: #000000;
+}
 .grid > :nth-child(3) h4 {
+  color: #000000;
   width: 20%;
   padding-left: 4rem;
   /* margin: 0 3rem 0 2rem; */
@@ -167,12 +251,12 @@ header > nav ul li:nth-child(3) {
 }
 .grid--benefits {
   gap: 0.5rem;
-  margin-top: 10rem;
+  margin-top: 15rem;
   font-weight: 700;
 }
 
 main > section:nth-child(5) {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 main > section:nth-child(5) h2 {
   text-align: center;
@@ -188,7 +272,7 @@ main > section:nth-child(5) h2 {
 }
 .flex > div {
   height: 40rem;
-  background-color: #e6e6e444;
+  background-color: var(--color-foreground);
   flex: 1;
   min-width: 22rem;
 }
@@ -204,13 +288,14 @@ main > section:nth-child(5) h2 {
 }
 .flex h5 {
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
 }
 
 /* ===================================Footer=================================== */
 footer {
-  background-color: #494636;
+  background-color: var(--color-secondary);
   color: white;
+  margin-top: 30rem;
 }
 footer li:first-child ~ li {
   margin-top: 1rem;
@@ -244,7 +329,7 @@ footer h6 {
   left: 0;
   top: 0;
   width: max(20%, 25rem);
-  background-color: white;
+  background-color: var(--color-background);
   height: 100%;
 }
 .sidebar--active {
@@ -302,7 +387,7 @@ footer h6 {
   height: 100vh;
   background-color: black;
   opacity: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 .menu__item {
   transition: 0.4s;
@@ -321,26 +406,14 @@ path {
   transition: 0.4s;
   stroke: black;
 }
-/*
-.hero-section {
-  grid-area: 1 / 1 / 1 / 6;
-  z-index: 1;
-} */
 
 main nav {
   /* grid-area: 1 / 3 / 1 / 4; */
   z-index: 2;
 }
-/* .menu__item svg:hover {
-  color: #f9f366;
-  filter: invert(98%) sepia(59%) saturate(1332%) hue-rotate(353deg)
-    brightness(122%) contrast(95%);
-}
-.menu__item:hover {
-  color: #f9f366;
-} */
+
 .menu--active {
-  border-left: 0.4rem solid #f9f366;
+  border-left: 0.4rem solid var(--color-primary);
   padding-left: 1.5rem;
 }
 /* ===================================Media Queries=================================== */
@@ -380,6 +453,6 @@ main nav {
 @media (min-width: 90em) {
   .grid {
     max-width: 140rem;
-    margin: 10rem auto 0 auto;
+    margin: 20rem auto 0 auto;
   }
 }

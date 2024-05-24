@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="light--mode transition--a">
     <!-- ==============================Header============================== -->
     <header>
       <nav>
@@ -29,18 +29,21 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="menu__stroke"
                   d="M7.08331 9.91669H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 17H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 24.0833H26.9166"
                   stroke="#081109"
                   stroke-width="2"
@@ -50,13 +53,13 @@
             </a>
           </li>
           <li>
-            <label for="switch">
-              <input type="checkbox" id="switch" />
-              <div class="toggle">
-                <span class="toggle__b"></span>
-                <span class="toggle__c"></span>
-              </div>
-            </label>
+            <div class="toggle">
+              <span
+                class="toggle__b transition--a"
+                aria-label="toggle dark mode"
+              ></span>
+              <span class="toggle__c transition--a"></span>
+            </div>
           </li>
           <li>
             <a href="">
@@ -167,190 +170,322 @@
           </div>
         </div>
       </section>
-
-      <section class="t-schedule">
-        <div class="flexbox-menu">
-          <ul>
-            <li><h2>Today's schedule</h2></li>
-            <li>
+      <!-- Use div to wrap sections -->
+      <div class="grid--tables">
+        <section class="table first--table transition--a">
+          <div class="flexbox-menu">
+            <ul>
+              <li><h2>Today's schedule</h2></li>
+              <li>
+                <svg
+                  class="menu--edit"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="12"
+                    r="1"
+                    transform="rotate(-90 12 12)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="18"
+                    r="1"
+                    transform="rotate(-90 12 18)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="6"
+                    r="1"
+                    transform="rotate(-90 12 6)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="flexbox-task">
+            <div>
               <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.5 21C16.299 21 21 16.299 21 10.5C21 4.70101 16.299 0 10.5 0C4.70101 0 0 4.70101 0 10.5C0 16.299 4.70101 21 10.5 21ZM15.9349 7.64024C16.2885 7.21596 16.2311 6.5854 15.8068 6.23183C15.3826 5.87827 14.752 5.93559 14.3984 6.35987L9.96716 11.6774C9.62044 12.0935 9.42553 12.3238 9.26991 12.4654L9.26396 12.4707L9.25755 12.4659C9.08976 12.339 8.87479 12.1273 8.49183 11.7443L6.54044 9.79295C6.14992 9.40242 5.51675 9.40242 5.12623 9.79295C4.7357 10.1835 4.7357 10.8166 5.12623 11.2072L7.07762 13.1586L7.11844 13.1994L7.11845 13.1994C7.44494 13.526 7.75903 13.8402 8.05127 14.0612C8.37864 14.3087 8.80735 14.5415 9.35676 14.5166C9.90618 14.4917 10.3121 14.221 10.6157 13.9449C10.8867 13.6983 11.1711 13.357 11.4666 13.0021L11.5036 12.9578L15.9349 7.64024Z"
+                  fill="#06BF93"
+                />
+              </svg>
+              <h3>
+                Task 1 <br />
+                <span>Medium</span>
+              </h3>
+              <h5>7:00 AM</h5>
+            </div>
+            <div class="add-task">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <circle
-                  cx="12"
-                  cy="12"
-                  r="1"
-                  transform="rotate(-90 12 12)"
-                  stroke="#33363F"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  cx="20"
+                  cy="20"
+                  r="19.5"
+                  fill="#F9F366"
+                  stroke="black"
+                  stroke-dasharray="2 2"
                 />
-                <circle
-                  cx="12"
-                  cy="18"
-                  r="1"
-                  transform="rotate(-90 12 18)"
+                <path
+                  d="M20 12.5L20 27.5"
                   stroke="#33363F"
                   stroke-width="2"
-                  stroke-linecap="round"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
                 />
-                <circle
-                  cx="12"
-                  cy="6"
-                  r="1"
-                  transform="rotate(-90 12 6)"
+                <path
+                  d="M27.5 20L12.5 20"
                   stroke="#33363F"
                   stroke-width="2"
-                  stroke-linecap="round"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
                 />
               </svg>
-            </li>
-          </ul>
-        </div>
-        <div class="flexbox-task">
-          <div>
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M10.5 21C16.299 21 21 16.299 21 10.5C21 4.70101 16.299 0 10.5 0C4.70101 0 0 4.70101 0 10.5C0 16.299 4.70101 21 10.5 21ZM15.9349 7.64024C16.2885 7.21596 16.2311 6.5854 15.8068 6.23183C15.3826 5.87827 14.752 5.93559 14.3984 6.35987L9.96716 11.6774C9.62044 12.0935 9.42553 12.3238 9.26991 12.4654L9.26396 12.4707L9.25755 12.4659C9.08976 12.339 8.87479 12.1273 8.49183 11.7443L6.54044 9.79295C6.14992 9.40242 5.51675 9.40242 5.12623 9.79295C4.7357 10.1835 4.7357 10.8166 5.12623 11.2072L7.07762 13.1586L7.11844 13.1994L7.11845 13.1994C7.44494 13.526 7.75903 13.8402 8.05127 14.0612C8.37864 14.3087 8.80735 14.5415 9.35676 14.5166C9.90618 14.4917 10.3121 14.221 10.6157 13.9449C10.8867 13.6983 11.1711 13.357 11.4666 13.0021L11.5036 12.9578L15.9349 7.64024Z"
-                fill="#06BF93"
-              />
-            </svg>
-            <h3>
-              Shower <br />
-              <span>Medium</span>
-            </h3>
-            <h5>8:30 AM</h5>
-          </div>
-          <div>
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="10.5" cy="10.5" r="10.5" fill="#D9D9D9" />
-            </svg>
-            <h3>
-              Breakfast <br />
-              <span>Low</span>
-            </h3>
-            <h5>9:00 AM</h5>
-          </div>
-          <div>
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="10.5" cy="10.5" r="10.5" fill="#D9D9D9" />
-            </svg>
-            <h3>
-              Gym <br />
-              <span>High</span>
-            </h3>
-            <h5>9:20 AM</h5>
-            <div>
-              <div>
-                <svg
-                  width="21"
-                  height="21"
-                  viewBox="0 0 21 21"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0C16.299 0 21 4.70101 21 10.5Z"
-                    fill="#D9D9D9"
-                  />
-                </svg>
-                <h3>Trip to the gym</h3>
-                <h5>9:20 AM</h5>
-              </div>
-              <div>
-                <svg
-                  width="21"
-                  height="21"
-                  viewBox="0 0 21 21"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0C16.299 0 21 4.70101 21 10.5Z"
-                    fill="#D9D9D9"
-                  />
-                </svg>
-
-                <h3>Workout</h3>
-                <h5>9:50 AM</h5>
-              </div>
-              <div>
-                <svg
-                  width="21"
-                  height="21"
-                  viewBox="0 0 21 21"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0C16.299 0 21 4.70101 21 10.5Z"
-                    fill="#D9D9D9"
-                  />
-                </svg>
-                <h3>Trip back home</h3>
-                <h5>12:00 AM</h5>
-              </div>
             </div>
+            <div class="extra-space"></div>
           </div>
-          <div class="add-task">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="20"
-                cy="20"
-                r="19.5"
-                fill="#F9F366"
-                stroke="black"
-                stroke-dasharray="2 2"
-              />
-              <path
-                d="M20 12.5L20 27.5"
-                stroke="#33363F"
-                stroke-width="2"
-                stroke-linecap="square"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M27.5 20L12.5 20"
-                stroke="#33363F"
-                stroke-width="2"
-                stroke-linecap="square"
-                stroke-linejoin="round"
-              />
-            </svg>
+        </section>
+        <section class="table second--table transition--a">
+          <div class="flexbox-menu">
+            <ul>
+              <li><h2>Extended tasks</h2></li>
+              <li>
+                <svg
+                  class="menu--edit"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="12"
+                    r="1"
+                    transform="rotate(-90 12 12)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="18"
+                    r="1"
+                    transform="rotate(-90 12 18)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="6"
+                    r="1"
+                    transform="rotate(-90 12 6)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </li>
+            </ul>
           </div>
-          <div class="extra-space"></div>
-        </div>
-      </section>
+          <div class="flexbox-task">
+            <div>
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.5 21C16.299 21 21 16.299 21 10.5C21 4.70101 16.299 0 10.5 0C4.70101 0 0 4.70101 0 10.5C0 16.299 4.70101 21 10.5 21ZM15.9349 7.64024C16.2885 7.21596 16.2311 6.5854 15.8068 6.23183C15.3826 5.87827 14.752 5.93559 14.3984 6.35987L9.96716 11.6774C9.62044 12.0935 9.42553 12.3238 9.26991 12.4654L9.26396 12.4707L9.25755 12.4659C9.08976 12.339 8.87479 12.1273 8.49183 11.7443L6.54044 9.79295C6.14992 9.40242 5.51675 9.40242 5.12623 9.79295C4.7357 10.1835 4.7357 10.8166 5.12623 11.2072L7.07762 13.1586L7.11844 13.1994L7.11845 13.1994C7.44494 13.526 7.75903 13.8402 8.05127 14.0612C8.37864 14.3087 8.80735 14.5415 9.35676 14.5166C9.90618 14.4917 10.3121 14.221 10.6157 13.9449C10.8867 13.6983 11.1711 13.357 11.4666 13.0021L11.5036 12.9578L15.9349 7.64024Z"
+                  fill="#06BF93"
+                />
+              </svg>
+              <h3>
+                Task 1 <br />
+                <span>Medium</span>
+              </h3>
+              <h5>7:00 AM</h5>
+            </div>
+            <div class="add-task">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="19.5"
+                  fill="#F9F366"
+                  stroke="black"
+                  stroke-dasharray="2 2"
+                />
+                <path
+                  d="M20 12.5L20 27.5"
+                  stroke="#33363F"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M27.5 20L12.5 20"
+                  stroke="#33363F"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="extra-space"></div>
+          </div>
+        </section>
+        <section class="table third--table transition--a">
+          <div class="flexbox-menu">
+            <ul>
+              <li><h2>Habits</h2></li>
+              <li>
+                <svg
+                  class="menu--edit"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="12"
+                    r="1"
+                    transform="rotate(-90 12 12)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="18"
+                    r="1"
+                    transform="rotate(-90 12 18)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    class="menu__stroke"
+                    cx="12"
+                    cy="6"
+                    r="1"
+                    transform="rotate(-90 12 6)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="flexbox-task">
+            <div>
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.5 21C16.299 21 21 16.299 21 10.5C21 4.70101 16.299 0 10.5 0C4.70101 0 0 4.70101 0 10.5C0 16.299 4.70101 21 10.5 21ZM15.9349 7.64024C16.2885 7.21596 16.2311 6.5854 15.8068 6.23183C15.3826 5.87827 14.752 5.93559 14.3984 6.35987L9.96716 11.6774C9.62044 12.0935 9.42553 12.3238 9.26991 12.4654L9.26396 12.4707L9.25755 12.4659C9.08976 12.339 8.87479 12.1273 8.49183 11.7443L6.54044 9.79295C6.14992 9.40242 5.51675 9.40242 5.12623 9.79295C4.7357 10.1835 4.7357 10.8166 5.12623 11.2072L7.07762 13.1586L7.11844 13.1994L7.11845 13.1994C7.44494 13.526 7.75903 13.8402 8.05127 14.0612C8.37864 14.3087 8.80735 14.5415 9.35676 14.5166C9.90618 14.4917 10.3121 14.221 10.6157 13.9449C10.8867 13.6983 11.1711 13.357 11.4666 13.0021L11.5036 12.9578L15.9349 7.64024Z"
+                  fill="#06BF93"
+                />
+              </svg>
+              <h3>
+                Task 1 <br />
+                <span>Medium</span>
+              </h3>
+              <h5>7:00 AM</h5>
+            </div>
+            <div class="add-task">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="19.5"
+                  fill="#F9F366"
+                  stroke="black"
+                  stroke-dasharray="2 2"
+                />
+                <path
+                  d="M20 12.5L20 27.5"
+                  stroke="#33363F"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M27.5 20L12.5 20"
+                  stroke="#33363F"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="extra-space"></div>
+          </div>
+        </section>
+      </div>
+
       <!-- ==============================Sidebar============================== -->
       <section>
         <nav class="sidebar sidebar--active">
@@ -365,25 +500,28 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="menu__stroke"
                   d="M7.08331 9.91669H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 17H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 24.0833H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
               </svg>
-              <span>Menu</span>
+              <span id="menu--text">Menu</span>
             </div>
             <div>
               <ul>
@@ -549,6 +687,7 @@
       <hr />
       <h6>© 2024 Delayo. All rights reserved.</h6>
     </footer>
-    <script src="../sidebar.js"></script>
+    <script type="module" src="../sidebar.js"></script>
+    <script type="module" src="../darkmode.js"></script>
   </body>
 </html>
