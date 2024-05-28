@@ -105,7 +105,43 @@
     </header>
     <!-- ==============================Main============================== -->
     <main>
-      <div class="overlay"></div>
+      <div class="modal hidden">
+        <div class="flexbox-modal">
+          <h4>New Task Window</h4>
+          <button class="close-modal">&times;</button>
+        </div>
+        <form action="">
+          <div>
+            <label for="task--name">Task name</label>
+            <input type="text" name="task" id="task--name" required />
+          </div>
+          <!-- dropdown menu -->
+          <div class="flexbox-fields">
+            <div>
+              <label for="difficulty">Select difficulty</label>
+              <select name="difficulty" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+            <div>
+              <label for="time">Set time</label>
+              <input type="time" name="time" id="time" />
+            </div>
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea name="description" id="description"></textarea>
+          </div>
+          <div class="button-container">
+            <button type="button" id="cancel-button">Cancel</button>
+            <button type="button">Confirm</button>
+          </div>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+      <div class="blur hidden"></div>
       <section class="dates">
         <h1>December 2023</h1>
         <div class="flexbox-container">
@@ -243,6 +279,7 @@
             </div>
             <div class="add-task">
               <svg
+                id="first-add"
                 width="40"
                 height="40"
                 viewBox="0 0 40 40"
@@ -689,5 +726,6 @@
     </footer>
     <script type="module" src="../sidebar.js"></script>
     <script type="module" src="../darkmode.js"></script>
+    <script src="../modal-window.js"></script>
   </body>
 </html>
