@@ -5,7 +5,7 @@
 <h4 align="center">Interactive time management web application</h4>
 <ul>Key Features:
 <li>Dark/Light mode</li>
-<li>Interacting sidebar</li>
+<li>Interactive sidebar</li>
 <li>Task scheduling</li>
 <li>Responsive design</li>
 </ul>
