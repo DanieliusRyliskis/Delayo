@@ -9,4 +9,7 @@
 <li>Task scheduling</li>
 <li>Responsive design</li>
 </ul>
-<h4>How to use:</h4>
+<h4>Site URL:</h4>
+https://delayo.netlify.app
+
+
