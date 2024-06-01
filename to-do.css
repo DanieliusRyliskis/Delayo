@@ -15,6 +15,7 @@
   --color-secondary: #494636;
   --color-accent: #50b19a;
   --text-color-primary: #000000;
+  --text-color-label: #7e7e7e;
   --text-color-secondary: #7e7e7e;
   --shadow-color: rgb(117, 117, 117);
   --cancel-button-color: #adada8;
@@ -27,6 +28,7 @@
   --color-accent: #50b19a;
   --text-color-primary: #ffffff;
   --text-color-secondary: #d2d2d2;
+  --text-color-label: #ffffff;
   --shadow-color: #000000;
   --cancel-button-color: #efefe0;
 }
@@ -51,12 +53,17 @@ h6 {
 .table h2 {
   color: var(--text-color-primary);
 }
-.table h2,
-.flexbox-task div h3 {
-  font-weight: bold;
+.table h2 {
   line-height: 1.6rem;
   font-weight: 700;
   font-size: var(--fs-h5);
+}
+.task-container > h3 {
+  font-weight: 500;
+  text-wrap: wrap;
+  line-height: 1.6rem;
+  font-size: var(--fs-h5);
+  display: inline-block;
 }
 .flexbox-task h3 > span {
   font-weight: 500;
@@ -174,6 +181,9 @@ header > nav ul li:nth-child(3) {
 }
 
 /* Today's schedule */
+.test {
+  border: 4px solid var(--text-color-primary);
+}
 .grid--tables {
   width: 85%;
   margin: 5rem auto;
@@ -183,10 +193,11 @@ header > nav ul li:nth-child(3) {
 }
 .table {
   background-color: var(--color-foreground);
-  min-width: 30rem;
+  width: 30rem;
   margin: 4rem auto;
   box-shadow: 0.1rem 0.1rem 0.2rem var(--shadow-color);
   min-height: 40rem;
+  height: max(fit-content, 40rem);
 }
 .flexbox-menu ul {
   display: flex;
@@ -201,32 +212,8 @@ header > nav ul li:nth-child(3) {
 .flexbox-task > div h3 > span {
   display: inline-block;
 }
-.flexbox-task > div:first-child h3 > span {
-  text-align: center;
-  margin-top: 0.2rem;
-  background-color: #f9f366;
-  padding: 0.1rem 0 0.1rem 0;
-  width: 6.6rem;
-  border-radius: 0.6rem;
-}
-.flexbox-task > div:nth-child(2) h3 > span {
-  box-sizing: border-box;
-  margin-top: 2px;
-  padding: 0.1rem 0 0.1rem 0.8rem;
-  background-color: #b9ff61;
-  width: 6.6rem;
-  border-radius: 0.6rem;
-}
-
-.flexbox-task > div:nth-child(3) h3 > span {
-  box-sizing: border-box;
-  margin-top: 0.2rem;
-  padding: 0.1rem 0 0.1rem 0.8rem;
-  background-color: #ff4444;
-  width: 6.6rem;
-  border-radius: 0.6rem;
-}
-.flexbox-task > div:not(.add-task, .extra-space) {
+/* Task divs */
+/* .flexbox-task > div:not(.add-task, .extra-space) {
   display: flex;
   align-items: center;
   background-color: var(--color-secondary);
@@ -236,6 +223,51 @@ header > nav ul li:nth-child(3) {
   margin: 0 auto;
   margin-bottom: 1.2rem;
   flex-wrap: nowrap;
+} */
+.task-container {
+  background-color: var(--color-secondary);
+  position: relative;
+  width: 94%;
+  margin: 0 auto;
+  min-height: 4.8rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.task-container > svg {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 0.5rem;
+}
+.task-container > div > h3 {
+  flex-grow: 2;
+}
+.flexbox-task div h5 {
+  margin-right: 1.2rem;
+}
+.easy,
+.normal,
+.hard {
+  text-align: center;
+  margin-top: 0.2rem;
+  padding: 0.1rem 0 0.1rem 0;
+  width: 6.6rem;
+  border-radius: 0.6rem;
+}
+.easy {
+  background-color: #b9ff61;
+  padding-left: 1rem;
+  text-align: start;
+}
+.normal {
+  background-color: #f9f366;
+}
+.hard {
+  background-color: #ff4444;
+  padding-left: 1rem;
+  text-align: start;
 }
 .flexbox-task h3,
 .flexbox-task h5 {
@@ -244,12 +276,10 @@ header > nav ul li:nth-child(3) {
 .flexbox-task h3 span {
   color: black;
 }
-.flexbox-task div > :first-child {
-  margin: 0 0.6rem 0 0.6rem;
-}
 
 .flexbox-task h3 {
   flex-grow: 1;
+  margin-left: 3rem;
 }
 .flexbox-task h5 {
   margin-right: 0.5rem;
@@ -262,12 +292,12 @@ header > nav ul li:nth-child(3) {
   margin-top: 0.5rem;
 }
 
-.flexbox-task > div:nth-child(3) {
+/* .flexbox-task > div:nth-child(3) {
   align-content: flex-start;
   height: 100%;
   flex-wrap: wrap;
   padding: 1rem 0 1rem 0;
-}
+} */
 
 .flexbox-task > div:nth-child(3) > div {
   flex-basis: 100%;
@@ -301,6 +331,25 @@ header > nav ul li:nth-child(3) {
   margin: 0;
 }
 /* ===================================Modal=================================== */
+form input {
+  color: var(--text-color-primary);
+}
+form textarea {
+  color: var(--text-color-primary);
+}
+.modal h4 {
+  color: var(--text-color-primary);
+}
+.modal label {
+  color: var(--text-color-label);
+}
+.flexbox-fields input,
+.flexbox-fields select {
+  color: var(--text-color-primary);
+}
+.flexbox-fields option {
+  color: #000000;
+}
 .hidden {
   display: none;
 }
@@ -325,10 +374,10 @@ header > nav ul li:nth-child(3) {
   flex-grow: 1;
 }
 .modal {
-  position: absolute;
-  box-shadow: 0.2rem 0.2rem 0.4rem rgb(129, 129, 129);
+  position: fixed;
+  box-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-color);
   width: clamp(50rem, 50vw, 75rem);
-  height: 80vh;
+  height: fit-content;
   background-color: var(--color-background);
   left: 50%;
   top: 50%;
@@ -342,7 +391,7 @@ form {
 form > div:not(.flexbox-fields, .button-container) {
   margin-top: 3rem;
   position: relative;
-  box-shadow: 1px 1px 2px #666666;
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--shadow-color);
   border-radius: 6px;
   width: 50%;
 }
@@ -350,7 +399,7 @@ form > div:not(.flexbox-fields, .button-container) {
 form > div:not(.flexbox-fields, .button-container) > :last-child {
   min-height: 3.5rem;
   margin-left: 2%;
-  width: 85%;
+  width: 96%;
 }
 form > div:nth-child(3) > :last-child {
   min-height: 24rem;
@@ -362,7 +411,7 @@ form > div:first-child {
 .flexbox-fields > div {
   margin-top: 1rem;
   position: relative;
-  box-shadow: 1px 1px 2px #666666;
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--shadow-color);
   border-radius: 6px;
   width: 50%;
   display: flex;
@@ -382,9 +431,6 @@ form > div:first-child {
   margin-left: 2%;
   width: 85%;
 }
-form > div:nth-child(3) > label {
-  /* display: none; */
-}
 form > div:nth-child(3) {
   width: 100%;
 }
@@ -399,7 +445,12 @@ form > div > label {
   color: #8f8f8f;
 }
 .flexbox-fields > div > label {
-  display: none;
+  opacity: 0%;
+  position: absolute;
+  top: -3rem;
+  text-align: center;
+  left: 50%;
+  translate: -50%;
   /* position: absolute;
   top: 7px;
   left: 8px;
@@ -419,6 +470,7 @@ form button {
   padding: 0.7rem 0;
   min-width: 10rem;
   cursor: pointer;
+  /* margin-bottom: 10rem; */
 }
 form .button-container > :first-child {
   background-color: var(--cancel-button-color);
@@ -431,11 +483,33 @@ form .button-container > :last-child {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 #first-add {
   cursor: pointer;
 }
+#second-add {
+  cursor: pointer;
+}
+#third-add {
+  cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(85%) sepia(81%) saturate(392%) hue-rotate(338deg)
+    brightness(106%) contrast(95%);
+}
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-color-primary);
+}
+#description {
+  overflow-wrap: break-word;
+  resize: none;
+}
 /* ===================================Sidebar=================================== */
 .sidebar {
   box-shadow: 0.1rem 0.1rem 0.7rem rgb(129, 129, 129);
@@ -494,7 +568,7 @@ form .button-container > :last-child {
 
 .overlay {
   /* display: none; */
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -504,7 +578,7 @@ form .button-container > :last-child {
   z-index: 1;
 }
 .blur {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
