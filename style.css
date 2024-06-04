@@ -147,6 +147,11 @@ header > nav ul li:nth-child(3) {
   fill: var(--text-color-primary);
 }
 /* ===================================Main=================================== */
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .hero-section {
   text-align: center;
   margin: 15rem 2.5rem 20rem 2.5rem;

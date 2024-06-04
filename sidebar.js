@@ -12,6 +12,8 @@ const pageName = document.title;
 const menuText = document.getElementById("menu--text");
 var modeColor = "#000000";
 
+document.querySelector("body").classList.remove("stop-scrolling");
+
 export const svgColors = function (element, elementColor) {
   const paths = element.children;
   for (let item of paths) {
@@ -76,11 +78,13 @@ const menuToggleOn = function (e) {
   e.preventDefault();
   sidebarActive.style.transform = "translate(0%)";
   overlay.style.display = "initial";
+  document.querySelector("body").classList.add("stop-scrolling");
 };
 const menuToggleOff = function (e) {
   e.preventDefault();
   sidebarActive.style.transform = "translate(-110%)";
   overlay.style.display = "none";
+  document.querySelector("body").classList.remove("stop-scrolling");
 };
 
 menuOpen.addEventListener("click", menuToggleOn);

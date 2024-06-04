@@ -24,6 +24,9 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 });
 var currentTable = "";
+
+document.querySelector("body").classList.remove("stop-scrolling");
+
 const hiddenArray = [modal, overlay, blur];
 
 const createSvg = function (shape) {
@@ -57,6 +60,13 @@ const changeModal = function () {
   hiddenArray.forEach((i) => {
     i.classList[this]("hidden");
   });
+  console.log(this);
+  console.log(typeof this);
+  if (this == "remove") {
+    document.querySelector("body").classList.add("stop-scrolling");
+  } else if (this == "add") {
+    document.querySelector("body").classList.remove("stop-scrolling");
+  }
 };
 const addTask = function (table) {
   let taskNameValue = taskNameInput.value;
