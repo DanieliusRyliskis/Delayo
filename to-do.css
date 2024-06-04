@@ -108,11 +108,15 @@ header > nav ul li:nth-child(1) {
   flex-grow: 1;
   margin-left: 1rem;
 }
+header > nav li:first-child svg {
+  cursor: pointer;
+}
 header > nav ul li:nth-child(2) {
   margin-right: 0.6rem;
 }
 header > nav ul li:nth-child(3) {
   margin: 0 1rem 0 0;
+  cursor: pointer;
 }
 /* =============Button============== */
 .toggle {
@@ -140,6 +144,7 @@ header > nav ul li:nth-child(3) {
   background-color: black;
   left: 0.22rem;
   top: 0.24rem;
+  cursor: pointer;
 }
 /* =============Calendar============== */
 .flexbox-container div > svg {
@@ -515,6 +520,9 @@ input:-webkit-autofill:active {
   resize: none;
 }
 /* ===================================Sidebar=================================== */
+#menu--close {
+  cursor: pointer;
+}
 .sidebar {
   box-shadow: 0.1rem 0.1rem 0.7rem rgb(129, 129, 129);
   position: absolute;
@@ -559,6 +567,7 @@ input:-webkit-autofill:active {
   justify-items: center;
   align-items: center;
   margin: 1rem auto;
+  cursor: pointer;
 }
 .grid__wrapper > div:nth-child(2) {
   align-self: self-start;

@@ -9,33 +9,57 @@
   --fs-h5: clamp(1rem, 0.92rem + 0.4vw, 1.4rem);
 }
 
+.light--mode {
+  --color-background: #ffffff;
+  --color-foreground: #e6e6e444;
+  --color-primary: #f9f366;
+  --color-secondary: #494636;
+  --color-accent: #50b19a;
+  --text-color-primary: #000000;
+  --text-color-secondary: #7e7e7e;
+}
+.dark--mode {
+  --color-background: #212121;
+  --color-foreground: #313131;
+  --color-primary: #f9f366;
+  --color-secondary: #54524b;
+  --color-accent: #50b19a;
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #d2d2d2;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+  background-color: var(--color-background);
 }
 
 h1 {
   font-weight: bold;
   font-size: var(--fs-h1);
+  color: var(--text-color-primary);
   /* padding-bottom: clamp(6rem, 1rem + 6vw, 10rem); */
   text-align: center;
 }
 h2 {
   font-weight: 600;
   font-size: var(--fs-h2);
+  color: var(--text-color-primary);
 }
 main h3 {
   font-weight: 500;
   font-size: var(--fs-h3);
+  color: var(--text-color-primary);
 }
 
 h4 {
   font-size: var(--fs-h4);
+  color: var(--text-color-primary);
 }
 
 main h5 {
   font-size: var(--fs-h5);
-  color: #898989;
+  color: var(--text-color-secondary);
 }
 
 h6 {
@@ -47,6 +71,9 @@ footer li:first-child ~ li {
 footer li:first-child {
   font-size: clamp(1.6rem, 1.36rem + 0.5357vw, 2.4rem);
   font-weight: 700;
+}
+aside li {
+  color: var(--text-color-primary);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -60,7 +87,6 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
 /* ================================Nav================================ */
 header > nav ul {
   display: flex;
@@ -81,11 +107,15 @@ header > nav ul li:nth-child(1) {
   flex-grow: 1;
   margin-left: 1rem;
 }
+header > nav li:first-child svg {
+  cursor: pointer;
+}
 header > nav ul li:nth-child(2) {
   margin-right: 0.6rem;
 }
 header > nav ul li:nth-child(3) {
   margin: 0 1rem 0 0;
+  cursor: pointer;
 }
 
 /* =============Button============== */
@@ -95,7 +125,9 @@ header > nav ul li:nth-child(3) {
   height: fit-content;
   display: flex;
 }
-
+.transition--a {
+  transition: 0.6s ease-in-out;
+}
 .toggle__b {
   width: 4.5rem;
   height: 2.1rem;
@@ -112,10 +144,14 @@ header > nav ul li:nth-child(3) {
   background-color: black;
   left: 0.22rem;
   top: 0.24rem;
+  cursor: pointer;
 }
 
 /* ================================Main================================ */
-
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 aside {
   display: none;
 }
@@ -139,7 +175,7 @@ aside li {
 }
 
 aside li:first-child {
-  background-color: #f9f366;
+  background-color: var(--color-primary);
 }
 .h2--general {
   margin-top: clamp(6rem, 1rem + 6vw, 10rem);
@@ -150,7 +186,7 @@ main {
 }
 
 hr {
-  border-top: thin solid #898989;
+  border-top: thin solid var(--text-color-secondary);
 }
 .dropdown {
   width: 80%;
@@ -171,7 +207,7 @@ hr {
 
 .field {
   position: relative;
-  border: 1px solid rgb(164, 164, 164);
+  border: 1px solid var(--text-color-secondary);
   display: block;
   width: 5.4rem;
   height: 2.2rem;
@@ -179,7 +215,7 @@ hr {
 }
 .dropdown-2 > :last-child {
   position: relative;
-  border: 1px solid rgb(164, 164, 164);
+  border: 1px solid var(--text-color-secondary);
   width: 5.4rem;
   height: 2.2rem;
   justify-self: center;
@@ -220,7 +256,7 @@ hr {
 }
 
 .circle {
-  box-shadow: 0.1rem 0.1rem 0.4rem rgb(113, 113, 113);
+  box-shadow: 0.1rem 0.1rem 0.4rem var(--text-color-secondary);
   background-color: #ffffff;
   border-radius: 50%;
 }
@@ -242,7 +278,7 @@ hr {
 }
 
 .edit {
-  background-color: #f9f366;
+  background-color: var(--color-primary);
   display: inline-block;
   padding: 0.4rem 0;
   width: 6rem;
@@ -250,6 +286,7 @@ hr {
 }
 .edit h4 {
   text-align: center;
+  color: #000000;
 }
 .grid--delete {
   grid-template-columns: 1fr 1fr;
@@ -262,6 +299,9 @@ hr {
   padding: 0.4rem 0;
   justify-self: start;
 }
+.grid--delete h4 {
+  color: #000000;
+}
 main .grid {
   margin-top: 0.4rem;
 }
@@ -269,13 +309,16 @@ main section:first-child ~ section {
   margin-top: 4rem;
 }
 /* ===================================Sidebar=================================== */
+#menu--close {
+  cursor: pointer;
+}
 .sidebar {
   box-shadow: 0.1rem 0.1rem 0.7rem rgb(129, 129, 129);
   position: absolute;
   left: 0;
   top: 0;
   width: max(20%, 25rem);
-  background-color: white;
+  background-color: var(--color-background);
   height: 100%;
   z-index: 1;
 }
@@ -314,6 +357,7 @@ main section:first-child ~ section {
   justify-items: center;
   align-items: center;
   margin: 1rem auto;
+  cursor: pointer;
 }
 .grid__wrapper > div:nth-child(2) {
   align-self: self-start;
@@ -353,12 +397,12 @@ main section:first-child ~ section {
   stroke: black;
 }
 .menu--active {
-  border-left: 0.4rem solid #f9f366;
+  border-left: 0.4rem solid var(--color-primary);
   padding-left: 1.5rem;
 }
 /* ===================================Footer=================================== */
 footer {
-  background-color: #494636;
+  background-color: var(--color-secondary);
   color: white;
 }
 footer li:first-child ~ li {
@@ -446,6 +490,6 @@ footer h6 {
 }
 @media (min-width: 90em) {
   aside {
-    display: initial;
+    /* display: initial; */
   }
 }

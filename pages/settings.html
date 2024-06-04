@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="light--mode transition--a stop-scrolling">
     <!-- ==============================Header============================== -->
     <header>
       <nav>
@@ -29,18 +29,21 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  class="menu__stroke"
                   d="M7.08331 9.91669H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 17H26.9166"
                   stroke="#081109"
                   stroke-width="2"
                   stroke-linecap="round"
                 />
                 <path
+                  class="menu__stroke"
                   d="M7.08331 24.0833H26.9166"
                   stroke="#081109"
                   stroke-width="2"
@@ -50,16 +53,16 @@
             </a>
           </li>
           <li>
-            <label for="switch">
-              <input type="checkbox" id="switch" />
-              <div class="toggle">
-                <span class="toggle__b"></span>
-                <span class="toggle__c"></span>
-              </div>
-            </label>
+            <div class="toggle">
+              <span
+                class="toggle__b transition--a"
+                aria-label="toggle dark mode"
+              ></span>
+              <span class="toggle__c transition--a"></span>
+            </div>
           </li>
           <li>
-            <a href="">
+            <a href="./register.html">
               <svg
                 width="80"
                 height="28"
@@ -115,25 +118,28 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="menu__stroke"
               d="M7.08331 9.91669H26.9166"
               stroke="#081109"
               stroke-width="2"
               stroke-linecap="round"
             />
             <path
+              class="menu__stroke"
               d="M7.08331 17H26.9166"
               stroke="#081109"
               stroke-width="2"
               stroke-linecap="round"
             />
             <path
+              class="menu__stroke"
               d="M7.08331 24.0833H26.9166"
               stroke="#081109"
               stroke-width="2"
               stroke-linecap="round"
             />
           </svg>
-          <span>Menu</span>
+          <span id="menu--text">Menu</span>
         </div>
         <div>
           <ul>
@@ -699,6 +705,7 @@
       <h6>© 2024 Delayo. All rights reserved.</h6>
     </footer>
 
-    <script src="../sidebar.js"></script>
+    <script type="module" src="../sidebar.js"></script>
+    <script type="module" src="../darkmode.js"></script>
   </body>
 </html>

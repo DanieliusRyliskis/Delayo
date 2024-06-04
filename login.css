@@ -1,174 +1,159 @@
 /* Could align items in the center with flex */
 
 /* =============================Text==================================== */
-:root{
-    font-size: 62.5%;
+:root {
+  font-size: 62.5%;
 }
-body{
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem;
-}
-
-h1{
-    font-weight: bold;
-    font-size: clamp(2.4rem, 1rem + 3vw, 4rem);
-    padding-bottom: clamp(6rem, 1rem + 6vw, 10rem);
-    margin-top: 12vh;
-    text-align: center;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
 }
 
-h2{
-    font-weight: 500;
+h1 {
+  font-weight: bold;
+  font-size: clamp(2.4rem, 1rem + 3vw, 4rem);
+  padding-bottom: clamp(6rem, 1rem + 6vw, 10rem);
+  margin-top: 12vh;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
 }
 /* Check box and forgot password */
-form div:nth-child(3){
-    font-size: clamp(1.2rem, 0.6rem + 1vw, 1.6rem);
-
+form div:nth-child(3) {
+  font-size: clamp(1.2rem, 0.6rem + 1vw, 1.6rem);
 }
 /* Username and Password label */
 form div:first-child label,
-form div:nth-child(2) label{
-    font-size: 1.4rem;
+form div:nth-child(2) label {
+  font-size: 1.4rem;
 }
 
 /* Login In with Google text */
-.flex-container h3{
-    font-weight: 500;
-    color: #666666;
+.flex-container h3 {
+  font-weight: 500;
+  color: #666666;
 }
 
 /* =============================Main section==================================== */
 form > div:first-child,
-form > div:nth-child(2){
-    position: relative;
-    width: min(75%, 40rem);
-    margin: 0 auto;
-    margin-bottom: 30px;
-    box-shadow: 1px 1px 2px #666666;
-    border-radius: 6px;
-    
+form > div:nth-child(2) {
+  position: relative;
+  width: min(75%, 40rem);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 2px #666666;
+  border-radius: 6px;
 }
 
 form > div:nth-child(2) > :last-child,
-form > div:first-child > :last-child{
-    width: 85%;
-    min-height: 35px;
-    margin-left: 2%;
-    
+form > div:first-child > :last-child {
+  width: 85%;
+  min-height: 35px;
+  margin-left: 2%;
 }
 
 form div:first-child label,
-form div:nth-child(2) label{
-    position: absolute;
-    top: 7px;
-    left: 8px;
-    color: #8f8f8f;
+form div:nth-child(2) label {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  color: #8f8f8f;
 }
-form div:nth-child(2) svg{
-    position: absolute;
-    top: 7px;
-    right: 10px;
+form div:nth-child(2) svg {
+  position: absolute;
+  top: 7px;
+  right: 10px;
 }
-form div:nth-child(3) input{
-    border: 1px solid black;
-    height: 19px;
-    width: 19px;
-}
-
-form div:nth-child(3){
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    width: min(70%, 37.5rem);
+form div:nth-child(3) input {
+  border: 1px solid black;
+  height: 19px;
+  width: 19px;
 }
 
-form div:nth-child(3) a{
-    color: #F9F366;
+form div:nth-child(3) {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: min(70%, 37.5rem);
 }
-form div:nth-child(3) > :nth-child(2){
-    margin-left: 8px;
-    flex-grow: 1;
+
+form div:nth-child(3) a {
+  color: #f9f366;
 }
-form button{
-    display: block;
-    margin: 25px auto;
-    width: min(75%, 300px);
-    height: 40px;
-    background-color: #F9F366;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.6rem;
+form div:nth-child(3) > :nth-child(2) {
+  margin-left: 8px;
+  flex-grow: 1;
+}
+form button {
+  display: block;
+  margin: 25px auto;
+  width: min(75%, 300px);
+  height: 40px;
+  background-color: #f9f366;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+button {
+  cursor: pointer;
 }
 /* =============================Lower section====================================  */
-.bridge{
-    margin: 3rem 0 2rem 0;
-    display: flex;
-    align-items: center;
-
+.bridge {
+  margin: 3rem 0 2rem 0;
+  display: flex;
+  align-items: center;
 }
-.bridge h2{
-    flex-grow: 1;
-    text-align: center;
-    
+.bridge h2 {
+  flex-grow: 1;
+  text-align: center;
 }
-hr{
-    display: inline-block;
-    height: 1px;
-    width: 100%;
-    background-color: #868686;
+hr {
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: #868686;
 }
-.bridge div{
-    width: 45%;
-    display: flex;
+.bridge div {
+  width: 45%;
+  display: flex;
 }
-.flex-container{
-    position: relative;
-    display: flex;
-    margin: 45px auto;
-    border: 1px solid #F9F366;
-    width: min(70%, 260px);
-    min-height: 35px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    
+.flex-container {
+  position: relative;
+  display: flex;
+  margin: 45px auto;
+  border: 1px solid #f9f366;
+  width: min(70%, 260px);
+  min-height: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
 }
-.flex-container h3{
-    text-align: center;
-    padding: clamp(0.2rem, 0.2rem + 1vw, 1rem) 0;
-    
+.flex-container h3 {
+  text-align: center;
+  padding: clamp(0.2rem, 0.2rem + 1vw, 1rem) 0;
 }
-.flex-container svg{
-    position: absolute;
-    left: 5%;
+.flex-container svg {
+  position: absolute;
+  left: 5%;
 }
 
 @media (min-height: 56em) {
-h1{
+  h1 {
     margin-top: 20vh;
-    
+  }
 }
-} 
 
-@media (max-width: 21em){
-.flex-container > svg{
+@media (max-width: 21em) {
+  .flex-container > svg {
     display: none;
+  }
 }
-}
-
-
-
-
-
-
-
-
 
 /* Ems in media queries are never based on the font size of body, or any other element for that matter. 
 They always refer to the default font size set by the user in the browser preferences.  */
 /* Use em's in media queries if you intend to support users who change their browser's font-size 
 value */
 /* My viewport is 1536 x 729 and second monitor is  1360 x 633*/
-
-

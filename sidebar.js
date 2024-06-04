@@ -2,7 +2,7 @@
 const body = document.querySelector("body");
 const menuOpen = document.getElementById("menu--open");
 const menuClose = document.getElementById("menu--close");
-const sidebar = document.querySelector("main nav");
+const sidebar = document.querySelector(".sidebar");
 const sidebarActive = document.querySelector(".sidebar--active");
 const overlay = document.querySelector(".overlay");
 // querySelectorAll returns a static not live nodelist

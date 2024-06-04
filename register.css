@@ -103,11 +103,13 @@ form button {
   text-align: center;
 }
 .login a {
+  cursor: pointer;
   color: #f9f366;
 }
-
+button {
+  cursor: pointer;
+}
 /* ========================================Lower section====================================== */
-
 .bridge {
   margin: 3rem 0 2rem 0;
   display: flex;
